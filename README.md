@@ -10,4 +10,9 @@ Inputs to EAP include raw sequencing data (in FASTQ format) and metadata (descri
 
 Workflow of Data preprocessing module, requires the upload of raw sequencing data and metadata using the Cloud Gene-Client tool. Upon completion, analysis-ready count tables and a summary quality control report are generated for downstream analysis.
 
+## Downstream analysis module
+![Downstream analysis module](https://github.com/haojiechen94/EAP/blob/main/images/cd.png)
+
+Two common research scenarios are depicted: (c) In scenarios where ChIP/ATAC-seq datasets have clearly defined sample labels, differential analysis can be used to detect differential signals between samples with different labels. This can be followed by differential TF motif enrichment analysis and differential TF activity analysis to explore the TFs associated with differential binding or open chromatin sites. (d) For datasets without pre-defined sample labels or with highly sophisticated sample labels (covering multiple cellular states or disease types), hypervariable analysis can be applied to identify hypervariable ChIP/ATAC-seq signals across the samples. These signals can then be used for clustering analysis to uncover the underlying heterogeneity structure among the samples. Samples can be grouped into different clusters, and signature genes scoring analysis can annotate these clusters based on established gene sets. Supervised analysis tools can also be used to detect binding/open chromatin sites or transcriptional regulators specific to each cluster.
+
 Url: https://www.biosino.org/epigenetics
