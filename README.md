@@ -15,4 +15,8 @@ Workflow of Data preprocessing module, requires the upload of raw sequencing dat
 
 Two common research scenarios are depicted: (c) In scenarios where ChIP/ATAC-seq datasets have clearly defined sample labels, differential analysis can be used to detect differential signals between samples with different labels. This can be followed by differential TF motif enrichment analysis and differential TF activity analysis to explore the TFs associated with differential binding or open chromatin sites. (d) For datasets without pre-defined sample labels or with highly sophisticated sample labels (covering multiple cellular states or disease types), hypervariable analysis can be applied to identify hypervariable ChIP/ATAC-seq signals across the samples. These signals can then be used for clustering analysis to uncover the underlying heterogeneity structure among the samples. Samples can be grouped into different clusters, and signature genes scoring analysis can annotate these clusters based on established gene sets. Supervised analysis tools can also be used to detect binding/open chromatin sites or transcriptional regulators specific to each cluster.
 
+## Data Set Browser
+
+EAP has been successfully applied to analyze ChIP/ATAC-seq data from various cancer epigenomic studies. The processed datasets are available on the Data Set Browser in EAP, and the platform offers an interactive interface for easy visualization of TF activity scores in each dataset. This module allows users to investigate the role of interest of transcriptional regulators in oncogenesis by choosing an appropriate data set.
+
 Url: https://www.biosino.org/epigenetics
