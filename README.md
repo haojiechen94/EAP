@@ -1,5 +1,5 @@
 # EAP: a cloud-based platform for scalable and comprehensive ChIP/ATAC-seq data analysis
-# Url: https://www.biosino.org/epigenetics ; [Run](https://www.biosino.org/epigenetics) analyses on your own data!
+# Url: https://www.biosino.org/epigenetics ; [Run](https://www.biosino.org/epigenetics) analysis on your own data!
 ## Schematic overview of EAP architecture and its analysis function
 ![workflow](https://github.com/haojiechen94/EAP/blob/main/images/a.png)
 
