@@ -1,0 +1,20 @@
+Paired-end ChIP-seq,,,,,
+sample_name,treatment_R1,treatment_R2,control_R1,control_R2,tissue_type
+Patien1_Tumor_tissue,Patien1_Tumor_tissue_treatment_R1.fq.gz,Patien1_Tumor_tissue_treatment_R2.fq.gz,Patien1_Tumor_tissue_control_R1.fq.gz,Patien1_Tumor_tissue_control_R2.fq.gz,tumor
+Patien2_Tumor_tissue,Patien2_Tumor_tissue_treatment_R1.fq.gz,Patien2_Tumor_tissue_treatment_R2.fq.gz,Patien2_Tumor_tissue_control_R1.fq.gz,Patien2_Tumor_tissue_control_R2.fq.gz,tumor
+Patien1_Normal_tissue,Patien1_Normal_tissue_treatment_R1.fq.gz,Patien1_Normal_tissue_treatment_R2.fq.gz,Patien1_Normal_tissue_control_R1.fq.gz,Patien1_Normal_tissue_control_R2.fq.gz,normal
+Patien2_Normal_tissue,Patien2_Normal_tissue_treatment_R1.fq.gz,Patien2_Normal_tissue_treatment_R2.fq.gz,Patien2_Normal_tissue_control_R1.fq.gz,Patien2_Normal_tissue_control_R2.fq.gz,normal
+,,,,,
+Single-end ChIP-seq,,,,,
+sample_name,treatment_R1,treatment_R2,control_R1,control_R2,tissue_type
+Patien1_Tumor_tissue,Patien1_Tumor_tissue_treatment.fq.gz,,Patien1_Tumor_tissue_control.fq.gz,,tumor
+Patien2_Tumor_tissue,Patien2_Tumor_tissue_treatment.fq.gz,,Patien2_Tumor_tissue_control.fq.gz,,tumor
+Patien1_Normal_tissue,Patien1_Normal_tissue_treatment.fq.gz,,Patien1_Normal_tissue_control.fq.gz,,normal
+Patien2_Normal_tissue,Patien2_Normal_tissue_treatment.fq.gz,,Patien2_Normal_tissue_control.fq.gz,,normal
+,,,,,
+ATAC-seq,,,,,
+sample_name,treatment_R1,treatment_R2,control_R1,control_R2,tissue_type
+Patien1_Tumor_tissue,Patien1_Tumor_tissue_treatment_R1.fq.gz,Patien1_Tumor_tissue_treatment_R2.fq.gz,,,tumor
+Patien2_Tumor_tissue,Patien2_Tumor_tissue_treatment_R1.fq.gz,Patien2_Tumor_tissue_treatment_R2.fq.gz,,,tumor
+Patien1_Normal_tissue,Patien1_Normal_tissue_treatment_R1.fq.gz,Patien1_Normal_tissue_treatment_R2.fq.gz,,,normal
+Patien2_Normal_tissue,Patien2_Normal_tissue_treatment_R1.fq.gz,Patien2_Normal_tissue_treatment_R2.fq.gz,,,normal
