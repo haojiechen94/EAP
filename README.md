@@ -20,4 +20,6 @@ Two common research scenarios are depicted: (c) In scenarios where ChIP/ATAC-seq
 
 EAP has been successfully applied to analyze ChIP/ATAC-seq data from various cancer epigenomic studies. The processed datasets are available on the Data Set Browser in EAP, and the platform offers an interactive interface for easy visualization of TF activity scores in each dataset. This module allows users to investigate the role of interest of transcriptional regulators in oncogenesis by choosing an appropriate data set.
 
+More details see [Document](https://github.com/haojiechen94/EAP/blob/main/doc/Help%20document.pdf)
+
 Url: https://www.biosino.org/epigenetics
