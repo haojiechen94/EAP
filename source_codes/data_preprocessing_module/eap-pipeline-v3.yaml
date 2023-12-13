@@ -1,0 +1,247 @@
+version: genecontainer_0_1
+workflow:
+  job1:
+    tool: 'thermoparser3:1.2'
+    type: GCS.Job
+    resources:
+      memory: 1G
+      cpu: 1C
+    commands:
+      - |
+        /bin/bash /sfs/${script_dir}/step0_mkdir.sh /obs/${Outputdir}
+  job2:
+    tool: 'thermoparser3:1.2'
+    type: GCS.Job
+    resources:
+      memory: 1G
+      cpu: 1C
+    commands:
+        - |
+          dos2unix --quiet /obs/${Inputdir}/${information_file} && sed '1d' /obs/${Inputdir}/${information_file}
+    depends:
+      - target: job1
+        type: whole
+  job3:
+    tool: 'eap-image1:latest'
+    type: GCS.Job
+    resources:
+      memory: 64G
+      cpu: 8C
+    commands_iter:
+      command:
+        echo ${1};
+        /bin/bash /sfs/${script_dir}/step1_fastqc_and_trim_galore.sh ${1} /obs/${Inputdir} /obs/${Outputdir} ${sequencing_type} 8
+      vars_iter:
+        - get_result(job2,"\n")
+    depends:
+      - target: job2
+        type: whole
+  job4:
+    tool: 'eap-image1:latest'
+    type: GCS.Job
+    resources:
+      memory: 128G
+      cpu: 24C
+    commands_iter:
+      command:
+        /bin/bash /sfs/${script_dir}/step2_reads_mapping_and_removing_duplicates.sh ${1} /obs/${Outputdir} /obs/${Outputdir} /sfs/${script_dir} /sfs/${REF_dir} ${REF_INDEX} ${sequencing_type} 24
+      vars_iter:
+        - get_result(job2,"\n")
+    depends:
+      - target: job2
+        type: whole
+      - target: job3
+        type: iterate
+  job5:
+    tool: 'eap-image1:latest'
+    type: GCS.Job
+    resources:
+      memory: 128G
+      cpu: 24C
+    commands_iter:
+      command:
+        /bin/bash /sfs/${script_dir}/step3_peaks_calling.sh ${1} /obs/${Outputdir} /obs/${Outputdir} ${REF_INDEX} ${sequencing_type}
+      vars_iter:
+        - get_result(job2,"\n")
+    depends:
+      - target: job2
+        type: whole
+      - target: job4
+        type: iterate
+  job6:
+    tool: 'eap-image2:latest'
+    type: GCS.Job
+    resources:
+      memory: 64G
+      cpu: 8C
+    commands_iter:
+      command:
+        /bin/bash /sfs/${script_dir}/step4_motif_enrichment.sh ${1} /obs/${Outputdir} /obs/${Outputdir} /sfs/${REF_dir} ${REF_INDEX} ${sequencing_type}
+      vars_iter:
+        - get_result(job2,"\n")
+    depends:
+      - target: job2
+        type: whole
+      - target: job5
+        type: iterate
+  job7:
+    tool: 'eap-image2:latest'
+    type: GCS.Job
+    resources:
+      memory: 64G
+      cpu: 8C
+    commands:
+      - |
+        /bin/bash /sfs/${script_dir}/step5_peaks_annotations.sh /obs/${Outputdir} /obs/${Outputdir} /sfs/${script_dir} /sfs/${REF_dir} ${REF_INDEX}
+    depends:
+      - target: job2
+        type: whole
+      - target: job6
+        type: whole
+  job8:
+    tool: 'eap-image1:latest'
+    type: GCS.Job
+    resources:
+      memory: 64G
+      cpu: 8C
+    commands:
+      - |
+        /bin/bash /sfs/${script_dir}/step6_reads_counting.sh /obs/${Outputdir} /obs/${Outputdir} /obs/${Inputdir}/${information_file} /sfs/${script_dir} /sfs/${REF_dir} ${REF_INDEX} ${sequencing_type} ${typical_bin_size}
+    depends:
+      - target: job2
+        type: whole
+      - target: job7
+        type: whole
+  job9:
+    tool: 'eap:latest'
+    type: GCS.Job
+    resources:
+      memory: 64G
+      cpu: 8C
+    commands:
+      - |
+        /bin/bash /sfs/${script_dir}/step7_differential_analysis.sh /obs/${Outputdir} /obs/${Outputdir} /obs/${Inputdir}/${information_file} /sfs/${script_dir} /sfs/${REF_dir} ${REF_INDEX} ${variable_of_interest}
+    depends:
+      - target: job1
+        type: whole
+      - target: job2
+        type: whole
+      - target: job8
+        type: whole
+  job10:
+    tool: 'eap-image2:latest'
+    type: GCS.Job
+    resources:
+      memory: 64G
+      cpu: 8C
+    commands:
+      - |
+        /bin/bash /sfs/${script_dir}/step8_functional_enrichment.sh /obs/${Outputdir} /obs/${Outputdir} /sfs/${script_dir} /sfs/${REF_dir} ${REF_INDEX}
+    depends:
+      - target: job1
+        type: whole
+      - target: job2
+        type: whole
+      - target: job9
+        type: whole
+  job11:
+    tool: 'eap-image3:latest'
+    type: GCS.Job
+    resources:
+      memory: 64G
+      cpu: 8C
+    commands:
+      - |
+        python "/sfs/${script_dir}/create_report.py" --input_dir="/obs/${Outputdir}" --name="${project_name}" --sequencing_type=${sequencing_type} --outdir="/obs/${Outputdir}" --cover_image="/sfs/${REF_dir}/logo_and_cover_image/cover.png" --logo_image="/sfs/${REF_dir}/logo_and_cover_image/logo.png" --workflow_chart="/sfs/${REF_dir}/logo_and_cover_image/workflow_chart.png"
+    depends:
+      - target: job1
+        type: whole
+      - target: job2
+        type: whole
+      - target: job3
+        type: whole
+      - target: job4
+        type: whole
+      - target: job5
+        type: whole
+      - target: job6
+        type: whole
+      - target: job7
+        type: whole
+      - target: job8
+        type: whole
+      - target: job9
+        type: whole
+      - target: job10
+        type: whole
+inputs:
+  Inputdir:
+    default: 'input/eap'
+    description: 'data dir for your input files'
+    type: string
+    label: basic
+  information_file:
+    default: 'metadata.csv'
+    descrption: 'information text,should be deposited in input_dir'
+    type: string
+    label: basic
+  sequencing_type:
+    default: 'ATAC'
+    description: 'Single end ChIP or Paired end ChIP or ATAC,choose between ATAC, ChIPPE and ChIPSE'
+    type: string
+    label: basic
+  Outputdir:
+    default: 'output/eap'
+    description: 'result dir for all samples'
+    type: string
+    label: basic
+  script_dir:
+    default: 'eap/scripts'
+    description: 'script file directory'
+    type: string
+    label: basic
+  REF_dir:
+    default: 'eap/REF'
+    description: 'reference file directory'
+    type: string
+    label: basic
+  REF_INDEX:
+    default: 'mm9'
+    description: 'Genome index,choose among :hg19,hg38,mm9,mm10'
+    type: string
+    label: basic
+  typical_bin_size:
+    default: 2000
+    description: 'typical bin size for profile-bins'
+    type: number
+    label: basic
+  variable_of_interest:
+    description: 'interested variable for differetial analysis'
+    type: string
+    label: basic
+  project_name: 
+    default: 'atac_try'
+    description: 'name of project'
+    type: string
+    label: basic
+  sfs_sub_path:
+    default: 
+    description: directory of analysis output
+    type: string
+    label: basic   
+  data_sub_path:
+    default: 
+    description: directory of analysis output
+    type: string
+    label: basic  
+volumes: 
+  gensfs:
+    mount_path: '/sfs'
+    mount_from: 
+      pvc: '${GCS_SFS_PVC}'
+      sub_path: ${sfs_sub_path}
+  genobs:
+    mount_path: '/obs'
+    mount_from:
+      pvc: '${GCS_DATA_PVC}'
+      sub_path: ${data_sub_path}
