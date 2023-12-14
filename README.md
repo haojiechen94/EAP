@@ -24,3 +24,5 @@ EAP has been successfully applied to analyze ChIP/ATAC-seq data from various can
 ### More details see [Help document](https://github.com/haojiechen94/EAP/blob/main/doc/Help%20document.pdf)
 
 Url: https://www.biosino.org/epigenetics
+
+### Source codes are available at [source_codes](https://github.com/haojiechen94/EAP/tree/main/source_codes)
