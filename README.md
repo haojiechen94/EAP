@@ -31,3 +31,11 @@ EAP has been successfully applied to analyze ChIP/ATAC-seq data from various can
 Url: https://www.biosino.org/epigenetics
 
 ### Source codes are available at [source_codes](https://github.com/haojiechen94/EAP/tree/main/source_codes)
+
+
+
+<p align="center">
+  <a href="#">
+     <img src="https://api.visitorbadge.io/api/visitors?path=https://github.com/haojiechen94/EAP" />
+   </a>
+</p>
