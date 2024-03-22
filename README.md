@@ -6,8 +6,9 @@
 
 ### Video tutorials
 ### [An example of applying EAP basic analysis module to paired-end ChIP-seq data](https://github.com/haojiechen94/EAP/blob/main/video_tutorials/Basic_analysis_module_demo_using_paired_end_ChIP_seq_data.mp4)
+### [An example of running differential analysis tools in advanced analysis module](https://github.com/haojiechen94/EAP/blob/main/video_tutorials/Advanced_analysis_module_demo_differential_analysis.mp4)
 
-
+### Introduction
 ### [An introduction for EAP](https://github.com/haojiechen94/EAP/blob/main/doc/Introduction.pdf)
 
 ### Schematic overview of EAP architecture and its analysis function
