@@ -5,6 +5,7 @@
 ### Prior to utilizing EAP, we strongly advise you to review our comprehensive [Help document](https://github.com/haojiechen94/EAP/blob/main/doc/Help%20document.pdf) and carefully follow the step-by-step tutorial provided. Testing datasets for downstream analysis tools in Tools Collection are availale at [testing_datasets](https://github.com/haojiechen94/EAP/tree/main/testing_datasets/testing_datasets_for_downstream_analysis_module). Additionally, we also provide video tutorials that visually demonstrate the processes and make it easier for users to learn and apply the procedures effectively.
 
 ### Video tutorials
+### [An example of data transferring and integrity checking](https://github.com/haojiechen94/EAP/blob/main/video_tutorials/Data_transferring_and_integrity_checking.mp4)
 ### [An example of applying EAP basic analysis module to paired-end ChIP-seq data](https://github.com/haojiechen94/EAP/blob/main/video_tutorials/Basic_analysis_module_demo_using_paired_end_ChIP_seq_data.mp4)
 ### [An example of running differential analysis tools in advanced analysis module](https://github.com/haojiechen94/EAP/blob/main/video_tutorials/Advanced_analysis_module_demo_differential_analysis.mp4)
 
