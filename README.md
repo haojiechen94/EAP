@@ -2,7 +2,9 @@
 
 ### Url: https://www.biosino.org/epigenetics ; [Running](https://www.biosino.org/epigenetics) analysis on your own data!
 
-### Prior to utilizing EAP, we strongly advise you to review our comprehensive [Help document](https://github.com/haojiechen94/EAP/blob/main/doc/Help%20document.pdf) and carefully follow the step-by-step tutorial provided. Testing datasets for downstream analysis tools in Tools Collection are availale at [testing_datasets](https://github.com/haojiechen94/EAP/tree/main/testing_datasets/testing_datasets_for_downstream_analysis_module). Additionally, we also provide video tutorials that visually demonstrate the processes and make it easier for users to learn and apply the procedures effectively.
+### Prior to utilizing EAP, we strongly advise you to review our comprehensive [Help document](https://github.com/haojiechen94/EAP/blob/main/doc/Help%20document.pdf) and carefully follow the step-by-step tutorial provided. Reading help documents can be time-consuming, however, you can use [txzy.ai](https://app.txyz.ai/) to help you. 
+![txzy.ai](https://github.com/haojiechen94/EAP/blob/main/images/f.png)
+### Testing datasets for downstream analysis tools in Tools Collection are availale at [testing_datasets](https://github.com/haojiechen94/EAP/tree/main/testing_datasets/testing_datasets_for_downstream_analysis_module). Additionally, we also provide video tutorials that visually demonstrate the processes and make it easier for users to learn and apply the procedures effectively.
 
 ### Video tutorials
 ### [An example of data transferring and integrity checking](https://github.com/haojiechen94/EAP/blob/main/video_tutorials/Data_transferring_and_integrity_checking.mp4)
