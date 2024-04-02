@@ -38,7 +38,7 @@ Url: https://www.biosino.org/epigenetics
 
 ### Source codes are available at [source_codes](https://github.com/haojiechen94/EAP/tree/main/source_codes)
 
-
+### Citation: EAP: a versatile cloud-based platform for comprehensive and interactive analysis of large-scale ChIP/ATAC-seq data sets. https://www.biorxiv.org/content/10.1101/2024.03.31.587470v1
 
 <p align="center">
   <a href="#">
