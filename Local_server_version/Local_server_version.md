@@ -11,7 +11,7 @@ Step3 Download scripts from .
 Step4 Running analysis on your data using eap_pipeline.sh.
 
 Here is the excution command:
-"./eap_pipeline_step3.sh ATAC|ChIPPE|ChIPSE genome_version typical_bin_size metadata.csv input_directory output_diectory variable_of_interest analysis_name scripts_path"
+"./eap_pipeline.sh ATAC|ChIPPE|ChIPSE genome_version typical_bin_size metadata.csv input_directory output_diectory variable_of_interest analysis_name scripts_path"
 
 ATAC|ChIPPE|ChIPSE: Choosing a sequencing library type for your data.
 
