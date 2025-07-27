@@ -2,7 +2,8 @@
 
 We provide the scripts and pre-configured Docker images for the local deployment of EAP, enabling users to run the analysis pipelines without relying on cloud infrastructure.
 
-Step1 Download docker images from Zenodo[https://doi.org/10.5281/zenodo.15762715].
+Step1 Download docker images from Zenodo[https://doi.org/10.5281/zenodo.15762715] or EAP using DEMO account:
+![Docker images](https://github.com/haojiechen94/EAP/blob/main/images/h.png)
 
 Step2 Download reference data from EAP[https://www.biosino.org/epigenetics/#] using DEMO account:
 ![Reference data](https://github.com/haojiechen94/EAP/blob/main/images/g.png)
