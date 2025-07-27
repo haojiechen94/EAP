@@ -4,7 +4,8 @@ We provide the scripts and pre-configured Docker images for the local deployment
 
 Step1 Download docker images from Zenodo:.
 
-Step2 Download reference data from: .
+Step2 Download reference data from EAP[https://www.biosino.org/epigenetics/#] using DEMO account:
+[https://github.com/haojiechen94/EAP/blob/main/images/g.png]
 
 Step3 Download scripts from Github[https://github.com/haojiechen94/EAP/tree/main/Local_server_version/scirpts].
 
