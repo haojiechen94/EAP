@@ -6,7 +6,7 @@ Step1 Download docker images from Zenodo:.
 
 Step2 Download reference data from: .
 
-Step3 Download scripts from .
+Step3 Download scripts from Github[https://github.com/haojiechen94/EAP/tree/main/Local_server_version/scirpts].
 
 Step4 Running analysis on your data using eap_pipeline.sh.
 
