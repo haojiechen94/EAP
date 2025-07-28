@@ -40,6 +40,9 @@ Url: https://www.biosino.org/epigenetics
 
 ### Source codes are available at [source_codes](https://github.com/haojiechen94/EAP/tree/main/source_codes)
 
+### Local deployment of EAP
+We provide scripts and pre-configured Docker images to support local deployment of EAP, allowing users to run analysis pipelines independently of cloud infrastructure. For details, please visit: https://github.com/haojiechen94/EAP/tree/main/Local_server_version.
+
 ### Citation: EAP: a versatile cloud-based platform for comprehensive and interactive analysis of large-scale ChIP/ATAC-seq data sets. https://www.biorxiv.org/content/10.1101/2024.03.31.587470v1
 
 <p align="center">
