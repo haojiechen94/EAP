@@ -50,6 +50,7 @@ If you have any questions or concerns regarding the EAP, please feel free to ask
 
 ### License for Data
 Text and materials are licensed under a Creative Commons CC BY-NC-SA 4.0 license. This license permits you to freely share (copy and redistribute), adapt (remix and transform), and build upon this material for non-commercial purposes.
+
 ![License](https://github.com/haojiechen94/EAP/blob/main/images/License.png)
 
 
