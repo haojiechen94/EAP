@@ -2,7 +2,7 @@
 
 # [Website](https://haojiechen94.github.io/my_website/)
 
-### Url: https://www.biosino.org/epigenetics ; [Running](https://www.biosino.org/epigenetics) analysis on your own data!
+### Url: https://www.biosino.org/epigenetics ; [Running](https://haojiechen94.github.io/my_website/) analysis on your own data!
 
 ### Prior to utilizing EAP, we strongly advise you to review our comprehensive [Help document](https://github.com/haojiechen94/EAP/blob/main/doc/Help%20document.pdf) and carefully follow the step-by-step tutorial provided. Reading help documents can be time-consuming, however, you can use [txzy.ai](https://app.txyz.ai/) to help you to quick access to the information you need. 
 ![txzy.ai](https://github.com/haojiechen94/EAP/blob/main/images/f.png)
