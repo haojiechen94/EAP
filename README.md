@@ -48,7 +48,7 @@ We provide scripts and pre-configured Docker images to support local deployment 
 ### Question and Answer
 If you have any questions or concerns regarding the EAP, please feel free to ask here. We will get back to you as soon as possible.
 
-### Citation: EAP: a versatile cloud-based platform for efficient quantitative analysis of large-scale ChIP/ATAC-seq datasets. Zheng, Guangyong et al. Computational and Structural Biotechnology Journal, 2025, https://www.csbj.org/article/S2001-0370(25)00494-5
+### Citation: EAP: a versatile cloud-based platform for efficient quantitative analysis of large-scale ChIP/ATAC-seq datasets. Zheng, Guangyong et al. Computational and Structural Biotechnology Journal, 2025, https://doi.org/10.1016/j.csbj.2025.11.026
 
 ### License for Data
 Text and materials are licensed under a Creative Commons CC BY-NC-SA 4.0 license. This license permits you to freely share (copy and redistribute), adapt (remix and transform), and build upon this material for non-commercial purposes.
