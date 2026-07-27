@@ -56,6 +56,9 @@ Text and materials are licensed under a Creative Commons CC BY-NC-SA 4.0 license
 
 <img src="https://github.com/haojiechen94/EAP/blob/main/images/License.png" alt="License" style="width:25%;" />
 
+#### Before using the EAP Platform, please read and sign [the User Service and Data Use Agreement](), then email the signed copy to the platform administrator for approval.
+
+
 #### The analysis capabilities of EAP will subsequently be extended to more omics data, such as single-cell or spatial transcriptomics, and single-cell or spatial proteomics.
 
 <p align="center">
